@@ -15,15 +15,34 @@ nav {
     width: 40%;
 }
 
+.menu-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .visible {
     display: block;
 }
 
 .hidden {
-    display: hidden;
+    display: none;
 }
 
 @media (min-width: 431px){
+    .menu-btn {
+        display: none;
+    }
+
     ul {
         display: flex;
         justify-content: space-evenly;
