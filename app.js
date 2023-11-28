@@ -1,5 +1,3 @@
-const example = ["Home", "About", "Contact"];
-
 // Returns a UL element.
 const createDropdown = function (dropdownItems) {
     const ul = document.createElement("ul");
@@ -29,7 +27,6 @@ const createDropdown = function (dropdownItems) {
         // Close all dropdowns, aside from the curr one
         document.querySelectorAll("[data-dropdown-btn].active").forEach((dropdown) => {
             if (dropdown === currDropdown) return;
-
             dropdown.classList.remove("active");
         })
     })
@@ -37,7 +34,7 @@ const createDropdown = function (dropdownItems) {
     return ul;
 }
 
+const example = ["Home", "About", "Contact"];
 const dropdownOne = createDropdown(example);
 const dropdownMenu = document.querySelector(".dropdown-menu");
-
 dropdownMenu.appendChild(dropdownOne)
